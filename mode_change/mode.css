@@ -1,0 +1,62 @@
+.dark{
+     background-color: black;
+     color: wheat;
+}
+.light{
+    background-color: white;
+    color: charcoal;
+}
+label{
+	width:100px;
+	height: 40px;
+	position: relative;
+	display: block;
+	background: pink;
+	box-shadow: inset 0px 2px 7px black, 0px -2px 7px beige;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+label:after{
+	content: "";
+	width:30px ;
+	height: 30px;
+	position: absolute;
+	top:4px;
+    left: 8px;
+    background:beige;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px black;
+    transition: 0.3s;
+}
+input{
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+input:checked+label{
+	background: black;
+}
+input:checked+label:after{
+	left: 90px;
+	transform: translateX(-100%);
+	background: linear-gradient(180deg,#777,#3a3a3a);
+}
+label:active:after{
+	width: 60px;
+}
+.fa{
+	position: absolute;
+	width: 25px;
+	top: 7px;
+	z-index: 100;
+}
+.sun{
+	left: 10px;
+	transition: 0.3s;
+}
+.moon{
+	font-size: 35px;
+	left: 65px;
+	transition: 0.3s;
+}
